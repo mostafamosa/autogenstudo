@@ -7,25 +7,11 @@ WORKDIR /
 # Update package lists and install necessary tools
 RUN apt-get update && apt-get install 
 
-# Import the NodeSource GPG key
-
-
-# Add NodeSource repository
-
-
-# Copy the requirements file and install Python dependencies
-
 RUN pip install autogenstudio
-
-# Copy the application source code to the container
-
-
-# Install any necessary Node.js dependencies
-# For example, if you have a package.json file
-
 
 # Expose the port the app runs on
 EXPOSE 8081
-
+COPY start.py
+RUN chmod +x ./start.py
 # Command to run AutoGen Studio
-CMD ["autogenstudio", "ui", "--port", "8081"]
+CMD ["./start.py"]
