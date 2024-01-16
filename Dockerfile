@@ -1,7 +1,7 @@
 
 FROM debian:bullseye-slim as base
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 
 ARG UID
 ENV UID=${UID:-9999}
