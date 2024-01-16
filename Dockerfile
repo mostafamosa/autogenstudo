@@ -24,4 +24,5 @@ COPY . .
 EXPOSE 8081
 
 # Command to run the application
-CMD ["python", "your-app-start-script.py"]
+CMD ["autogenstudio", "ui", "--port", "8081"]
+
