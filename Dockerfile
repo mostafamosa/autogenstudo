@@ -8,8 +8,8 @@ WORKDIR /
 RUN apt-get update && apt-get install 
 
 RUN pip install autogenstudio
-ARG PORT1
-ENV D_PORT=$PORT1
+
+ENV D_PORT=´8081
 # Expose the port the app runs on
 
 CMD ["autogenstudio", "ui", "--port", "D_PORT"]
