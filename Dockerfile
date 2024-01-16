@@ -11,7 +11,4 @@ RUN pip install autogenstudio
 
 # Expose the port the app runs on
 EXPOSE 8081
-COPY start.py ./
-RUN chmod +x ./start.py
-# Command to run AutoGen Studio
-CMD ["./start.py"]
+CMD ["autogenstudio", "ui", "--port", "8081"]
