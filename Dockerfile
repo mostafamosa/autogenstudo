@@ -10,4 +10,4 @@ RUN apt-get update && apt-get install
 RUN pip install autogenstudio
 
 
-CMD ["autogenstudio", "ui", "--port", "80"]
+CMD ["autogenstudio", "ui"]
