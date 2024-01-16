@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install
 # Copy the requirements file and install Python dependencies
 
 RUN pip install autogenstudio
-EXPORT = OPENAI_API_KEY=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
+EXPOSE = OPENAI_API_KEY=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
 # Copy the application source code to the container
 
 
