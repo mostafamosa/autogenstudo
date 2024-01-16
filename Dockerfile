@@ -22,7 +22,14 @@ COPY . .
 
 # Expose the port the app runs on
 EXPOSE 8081
-Export PUBLIC_URL=${RAILWAY_PUBLIC_DOMAIN:-"http://localhost:8081"}
+#!/bin/bash
+DOMAIN=${DOMAIN:-"defaultdomain.com"}
+GRAPHQL_PATH=${GRAPHQL_PATH:-"/v1/gql"}
+GRAPHQL_ENDPOINT="https://${DOMAIN}${GRAPHQL_PATH}"
+
+# Export for application use
+export GRAPHQL_ENDPOINT
+
 # Command to run the application
 CMD ["autogenstudio", "ui", "--port", "8081"]
 
