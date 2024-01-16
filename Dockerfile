@@ -22,7 +22,7 @@ COPY . .
 
 # Expose the port the app runs on
 EXPOSE 8081
-
+Export PUBLIC_URL=${RAILWAY_PUBLIC_DOMAIN:-"http://localhost:8081"}
 # Command to run the application
 CMD ["autogenstudio", "ui", "--port", "8081"]
 
