@@ -1,5 +1,5 @@
 FROM python:3.11
-ARG PORT
+
 
 WORKDIR /
 
@@ -15,4 +15,4 @@ EXPOSE 8081
 # Install autogenstudio
 RUN pip install autogenstudio
 
-CMD ["autogenstudio", "ui", "--host", "0.0.0.0", "--port", "$PORT"]
+CMD ["autogenstudio", "ui", "--host", "0.0.0.0", "--port", "PORT"]
