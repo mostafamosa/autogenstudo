@@ -1,6 +1,9 @@
 import os
 import subprocess
-EXPORT OPENAI_API_KEY=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
+
+# Set environment variable
+os.environ["OPENAI_API_KEY"] = "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"
+
 
 # Start your application
 autogenstudio ui --port 8081
