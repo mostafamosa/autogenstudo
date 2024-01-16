@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y ca-certificates curl gnupg \
     && apt-get update && apt-get install -y nodejs 
 RUN pip install --upgrade pip 
 
-
+EXPOSE 8081
 # Install autogenstudio
 RUN pip install autogenstudio
 
