@@ -1,8 +1,3 @@
-on:
-  push:
-    branches:
-      - main
-
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
