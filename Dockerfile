@@ -14,4 +14,4 @@ RUN pip install --upgrade pip
 # Install autogenstudio
 RUN pip install autogenstudio
 
-CMD ["autogenstudio", "ui", D_PORT]
+CMD ["autogenstudio", "ui", 8081]
