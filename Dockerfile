@@ -14,4 +14,4 @@ EXPOSE 8081
 # Install autogenstudio
 RUN pip install autogenstudio
 
-CMD ["autogenstudio", "ui", "--host", "0.0.0.0", "--port", "8081"]
+CMD ["autogenstudio", "ui", "--host", "0.0.0.0", "--port", "PORT"]
