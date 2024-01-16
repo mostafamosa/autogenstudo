@@ -12,4 +12,4 @@ ARG PORT1
 ENV D_PORT=$PORT1
 # Expose the port the app runs on
 
-CMD ["autogenstudio", "ui", "--port", "PORT1"]
+CMD ["autogenstudio", "ui", "--port", "D_PORT"]
