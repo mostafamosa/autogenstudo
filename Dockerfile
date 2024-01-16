@@ -1,6 +1,6 @@
 FROM python:3.11
 ARG PORT
-ENV PORT=$PORT
+
 WORKDIR /
 
 # Install required packages and add NodeSource repository
