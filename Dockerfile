@@ -18,7 +18,7 @@ COPY . .
 
 # Install any necessary Node.js dependencies
 # For example, if you have a package.json file
-RUN npm install
+
 
 # Expose the port the app runs on
 EXPOSE 8081
