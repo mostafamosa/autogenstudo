@@ -1,6 +1,6 @@
 #!/bin/bash
 # Set default values if not provided
-DOMAIN=${{shared.DOMAIN}}
+DOMAIN=${RAILWAY_PUBLIC_DOMAIN:-"up.railway.app"}
 GRAPHQL_PATH=${GRAPHQL_PATH:-"/v1/gql"}
 GRAPHQL_ENDPOINT="https://${DOMAIN}${GRAPHQL_PATH}"
 
