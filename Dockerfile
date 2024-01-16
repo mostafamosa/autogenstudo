@@ -22,14 +22,10 @@ COPY . .
 
 # Expose the port the app runs on
 EXPOSE 8081
-#!/bin/bash
-DOMAIN=${DOMAIN:-"defaultdomain.com"}
-GRAPHQL_PATH=${GRAPHQL_PATH:-"/v1/gql"}
-GRAPHQL_ENDPOINT="https://${DOMAIN}${GRAPHQL_PATH}"
+# Copy the start script into the container
+COPY start.sh .
+# Make the start script executable
+RUN chmod +x ./start.sh
 
-# Export for application use
-export GRAPHQL_ENDPOINT
-
-# Command to run the application
-CMD ["autogenstudio", "ui", "--port", "8081"]
-
+# Start the application using the script
+CMD ["./start.sh"]
