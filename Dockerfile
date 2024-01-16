@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y ca-certificates curl gnupg \
     && echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" > /etc/apt/sources.list.d/nodesource.list \
     && apt-get update && apt-get install -y nodejs 
 RUN pip install --upgrade pip 
-
+ARG D_PORT
+ENV DPORT=$PORT
 EXPOSE 8081
 # Install autogenstudio
 RUN pip install autogenstudio
