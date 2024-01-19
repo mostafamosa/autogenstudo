@@ -13,6 +13,7 @@ RUN pip install --upgrade pip
 ENV OPENAI_API_KEY={{shared.OPENAI_API_KEY}}
 EXPOSE 8081
 # Install autogenstudio
+RUN pip install autogen
 RUN pip install autogenstudio
 
 CMD autogenstudio ui --host 0.0.0.0 --port $PORT
